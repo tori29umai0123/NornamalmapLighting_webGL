@@ -3109,10 +3109,6 @@ function unityFramework(Module) {
     }
     SendMessage(gameObjectName, methodName, urls.join());
 
-    // Only try to remove fileInput if it is a child of document.body
-    if (document.body.contains(fileInput)) {
-        document.body.removeChild(fileInput);
-    }
 });
         document.body.appendChild(fileInput);
         document.onmouseup = (function() {
