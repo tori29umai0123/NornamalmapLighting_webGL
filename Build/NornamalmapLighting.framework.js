@@ -3103,13 +3103,13 @@ function unityFramework(Module) {
         }
         );
         fileInput.onchange = (function(event) {
-    var urls = [];
-    for (var i = 0; i < event.target.files.length; i++) {
-        urls.push(URL.createObjectURL(event.target.files[i]))
-    }
-    SendMessage(gameObjectName, methodName, urls.join());
-
-});
+            var urls = [];
+            for (var i = 0; i < event.target.files.length; i++) {
+                urls.push(URL.createObjectURL(event.target.files[i]))
+            }
+            SendMessage(gameObjectName, methodName, urls.join());
+        }
+        );
         document.body.appendChild(fileInput);
         document.onmouseup = (function() {
             fileInput.click();
